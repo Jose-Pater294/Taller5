@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../js/utilidades.js"></script>
+    <link rel="stylesheet" href="../CSS/estilosTaller5.css">
+</head>
+
+<body>
+
+
+    <script>
+        var divPapi = crearElemento("div");
+        divPapi.classList.add("Contenedorpapa");
+        adicionarBody(divPapi);
+
+        hacerDiv1();
+        hacerDiv2();
+        hacerDiv3();
+        hacerDiv4();
+        hacerDiv5();
+        hacerDiv6();
+        function hacerDiv1() {
+            var div1 = crearElemento("div");
+            var img = crearElemento("img");
+            img.setAttribute("src", "../recursos/imagenes/imagen 4.jpg");
+            adicionarHijo(div1, img);
+            adicionarHijo(divPapi, div1);
+        }
+        function hacerDiv2() {
+            var divramon = crearElemento("div");
+            divramon.classList.add("divPapa");
+
+            var div1 = crearElemento("div");
+            var img1 = crearElemento("img");
+            img1.setAttribute("src", "../recursos/imagenes/imagen 2.jpg");
+            adicionarHijo(div1, img1);
+            adicionarHijo(divramon, div1);
+
+
+            var div2 = crearElemento("div");
+            var img2 = crearElemento("img");
+            img2.setAttribute("src", "../recursos/imagenes/imagen 9.jpg");
+            adicionarHijo(div2, img2);
+            adicionarHijo(divramon, div2);
+            adicionarHijo(divPapi, divramon);
+
+
+
+        }
+        function hacerDiv3() {
+            var div3 = crearElemento("div");
+            var img = crearElemento("img");
+            img.setAttribute("src", "../recursos/imagenes/imagen 6.jpg");
+            adicionarHijo(div3, img);
+            adicionarHijo(divPapi, div3);
+        }
+        function hacerDiv4() {
+            var div1 = crearElemento("div");
+            var img = crearElemento("img");
+            img.setAttribute("src", "../recursos/imagenes/imagen 5.jpg");
+            adicionarHijo(div1, img);
+            adicionarHijo(divPapi, div1);
+        }
+        function hacerDiv5() {
+            var div5 = crearElemento("div");
+            var img = crearElemento("img");
+            img.setAttribute("src", "../recursos/imagenes/imagen 1.jpg");
+            adicionarHijo(div5, img);
+            adicionarHijo(divPapi, div5);
+        }
+        function hacerDiv5() {
+            var divramon2 = crearElemento("div");
+            divramon2.classList.add("divUltimo");
+
+            var div5 = crearElemento("div");
+            var img1 = crearElemento("img");
+            img1.setAttribute("src", "../recursos/imagenes/imagen 3.jpg");
+            adicionarHijo(div5, img1);
+            adicionarHijo(divramon2, div5);
+
+            var div6 = crearElemento("div");
+            var img2 = crearElemento("img");
+            img2.setAttribute("src", "../recursos/imagenes/imagen 8.jpg");
+            adicionarHijo(div6, img2);
+            adicionarHijo(divramon2, div6);
+            adicionarHijo(divPapi, divramon2);
+
+        }
+
+        function hacerDiv6() {
+            var divHij = crearElemento("div");
+            var formulario = crearElemento("formulario");
+
+            var contenedorI = crearElemento("div");
+            contenedorI.classList.add("contenedorInter");
+            var titulo = crearElemento("h2");
+            titulo.innerText = "SECION";
+            adicionarHijo(contenedorI, titulo);
+
+            var num = crearElemento("input");
+            num.setAttribute("type", "name");
+            num.setAttribute("placeholder", "name");
+            adicionarHijo(contenedorI, num);
+
+            var correo = crearElemento("input");
+            correo.setAttribute("type", "email");
+            correo.setAttribute("placeholder", "Email");
+            adicionarHijo(contenedorI, correo);
+
+            var mess = crearElemento("textarea");
+            mess.setAttribute("placeholder", "Menssag");
+            adicionarHijo(contenedorI, mess);
+
+            var btn = crearElemento("input");
+            btn.setAttribute("type", "submit");
+            btn.setAttribute("value", "now");
+            btn.setAttribute("id", "boton");
+            var btndiv = crearElemento("div");
+            btndiv.classList.add("but");
+            adicionarHijo(btndiv, btn);
+            adicionarHijo(contenedorI, btndiv);
+
+            adicionarHijo(formulario, contenedorI);
+            adicionarHijo(divHij, formulario);
+            adicionarHijo(divPapi, divHij);
+        }
+
+    </script>
+
+
+
+</body>
+
+</html>
